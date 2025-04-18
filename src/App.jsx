@@ -94,10 +94,26 @@ function App() {
 
       {/* Header */}
       <header className="navbar p-2 border-b-thin sticky">
-        <nav className="container flex space-between">
+        <nav className="container flex space-between align-center">
           <a href="#" className="nav-link font-black fw-thick big-font">Quik CSS</a>
-          <div className="flex">
-            <button className="theme-toggle mr-2 hide-mobile" id="themeToggle" aria-label="Toggle Dark Mode" onClick={toggleTheme}>
+          <div className="flex align-center">
+            <button 
+              className="theme-toggle mr-2" 
+              id="themeToggle" 
+              aria-label="Toggle Dark Mode" 
+              onClick={toggleTheme}
+              style={{
+                width: '40px',
+                height: '40px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                background: 'none',
+                border: 'none',
+                cursor: 'pointer',
+                padding: '8px'
+              }}
+            >
               <svg className={`sun-icon ${theme === 'light' ? 'opacity-100' : 'opacity-0'}`} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <circle cx="12" cy="12" r="5"/>
                 <line x1="12" y1="1" x2="12" y2="3"/>
